@@ -5,7 +5,7 @@ class Resolver:
     def __init__(self):
         self._cache={}
 
-    #make class callable
+    #make instance callable
     def __call__(self, host):
         if host not in self._cache:
             self._cache[host] = socket.gethostbyname(host)
